@@ -1,0 +1,57 @@
+    <h1 >Trailer - Video</h1>
+    <p>
+    <button onclick="playVid()">Play Video</button>
+    <button onclick="pauseVid()">Pause Video</button>
+    <button onclick="durationVid()" type="button">Duration Video</button>
+    <button onclick="enableControls()" type="button">Enable Controls</button>
+    <button onclick="disableControls()" type="button">Disable Controls</button>
+    <button onclick="checkControls()" type="button">Check Controls</button>
+    </p>
+    <video  width="1450" id="myVideo"> 
+        <source src="Media\mediamov_bbb.mp4" type="video/mp4">
+        browser not support
+    </video>
+
+    <hr />
+
+
+    <footer class="text-align">
+        <p>Copyright &copy; 2022 Abito</p>
+
+    </footer>
+
+</body>
+<script>
+var vid = document.getElementById("myVideo");
+
+function playVid() {
+vid.play();
+vid.loop = true;
+}
+
+function pauseVid() {
+vid.pause();
+}
+
+function durationVid() {
+alert(vid.duration);
+}
+
+function enableControls () {
+vid.controls = true;
+vid.load();
+}
+
+function disableControls () {
+vid.controls = false;
+vid.load();
+}
+
+function checkControls() {
+alert(vid.controls);
+}
+
+
+
+</script>
+</html>
